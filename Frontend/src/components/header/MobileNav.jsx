@@ -23,6 +23,11 @@ const MobileNav = ({ menuItems, onClose, onOpen, hideLeft }) => {
               </li>
             ))}
           </ul>
+          <ul className='flex items-center gap-4 mt-10 font-medium'>
+            <li > <button className='px-4 py-3 text-black border rounded'>Log In</button></li>
+            <li  ><li > <button className='px-4 py-3 text-black border rounded'>Log Out</button></li></li>
+            
+          </ul>
         </div>
       </div>
     </div>
