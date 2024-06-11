@@ -7,10 +7,12 @@ import './index.css';
 import { createBrowserRouter } from 'react-router-dom';
 import { RouterProvider } from 'react-router-dom'; 
 import Home from './components/Home.jsx';
+import ErrorElement from './components/ErrorElement.jsx';
 const router = createBrowserRouter([ 
   {
     path: '/',
-    element: <App />, 
+    element: <App />,
+    errorElement:<ErrorElement/>, 
     children:[
       {
         path:'/',

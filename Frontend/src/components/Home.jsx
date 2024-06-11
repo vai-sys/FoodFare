@@ -1,11 +1,13 @@
 import React from 'react'
+import Hero from './Hero'
 
 const Home = () => {
   return (
-    <div>
-        <h1 className="text-3xl font-bold underline">
-    Home
-  </h1>
+    <div className='container mx-auto bg-orange-100'>
+       <div className='flex flex-col items-center justify-center w-full py-20'>
+        <Hero/>
+       </div>
+      
     </div>
   )
 }
