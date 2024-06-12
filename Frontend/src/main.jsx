@@ -8,6 +8,7 @@ import { createBrowserRouter } from 'react-router-dom';
 import { RouterProvider } from 'react-router-dom'; 
 import Home from './components/Home.jsx';
 import ErrorElement from './components/ErrorElement.jsx';
+import CategoryPage from './components/Category/CategoryPage.jsx';
 const router = createBrowserRouter([ 
   {
     path: '/',
@@ -17,6 +18,10 @@ const router = createBrowserRouter([
       {
         path:'/',
         element:<Home/>
+      },
+      {
+        path:'/categories/:category',
+        element:<CategoryPage/>
       }
     ]
   },
