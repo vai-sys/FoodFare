@@ -9,6 +9,7 @@ import { RouterProvider } from 'react-router-dom';
 import Home from './components/Home.jsx';
 import ErrorElement from './components/ErrorElement.jsx';
 import CategoryPage from './components/Category/CategoryPage.jsx';
+import Search from './components/Search.jsx';
 const router = createBrowserRouter([ 
   {
     path: '/',
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
       {
         path:'/categories/:category',
         element:<CategoryPage/>
+      },
+      {
+        path:'/search',
+        element:<Search/>
       }
     ]
   },

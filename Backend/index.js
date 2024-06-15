@@ -73,6 +73,8 @@ main().then(() => {
 const ItemRoutes = require("./src/routes/itemRoute");
 app.use('/api', ItemRoutes);
 
+const categoryRoutes=require("./src/routes/categoryRoutes")
+app.use('/api/',categoryRoutes)
 app.listen(port, () => {
   console.log(`Server is running on ${port}`);
 });
