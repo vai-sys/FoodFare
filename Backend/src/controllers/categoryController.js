@@ -1,20 +1,56 @@
-const category=require("../model/categoryModel");
-const Item=require("../model/itemModel");
+const Category = require("../model/categoryModel");
+const Item = require("../model/itemModel");
 
-const getCategory=async(req,res)=>{
-    const {category}=req.params;
-    try{
-   const categorydata=await category.findOne({name:category});
+// const getCategory = async (req, res) => {
+//     const { category } = req.params;
 
-     if(!categorydata){
-        return res.status(404).json({message:"category Not Found"})
-     }
-     const items=Item.find({menuId:categorydata.menuId});
-     res.status(200).json(items)
-    }catch(err){
-        res.status(500).json({message:"No Category Specified"})
+//     try {
+//         const categoryData = await Category.findOne({ name: category });
+
+//         if (!categoryData) {
+//             console.log(`Category ${category} not found`);
+//             return res.status(404).json({ message: "Category Not Found" });
+//         }
+
+//         const items = await Item.find({ menuId: categoryData.menuId });
+//         console.log("items:", items);
+//         res.status(200).json(items);
+//     } catch (err) {
+//         console.error('Error fetching category:', err.message);
+//         res.status(500).json({ message: "An error occurred while fetching the category" });
+//     }
+// };
+
+
+const getCategory = async (req, res) => {
+    const { category } = req.params;
+    console.log(`Fetching category: ${category}`);
+    
+    try {
+        // Use a case-insensitive regex to find the category
+        const categoryData = await Category.findOne({ 
+            name: { $regex: new RegExp(`^${category}$`, 'i') }
+        });
+        console.log('Category data:', categoryData);
+        
+        if (!categoryData) {
+            console.log(`Category ${category} not found`);
+            return res.status(404).json({ message: "Category Not Found" });
+        }
+        
+        console.log(`Finding items with menuId: ${categoryData.menuId}`);
+        const items = await Item.find({ menuId: categoryData.menuId });
+        console.log("items:", items);
+        res.status(200).json(items);
+    } catch (err) {
+        console.error('Error fetching category:', err.message);
+        res.status(500).json({ message: "An error occurred while fetching the category" });
     }
-}
-module.exports={
+};
+
+
+ 
+module.exports = {
     getCategory
-}
+};
+

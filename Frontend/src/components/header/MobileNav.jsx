@@ -1,5 +1,3 @@
-
-
 import React from 'react';
 import { HiBars3BottomRight } from "react-icons/hi2";
 import { Link } from 'react-router-dom';
@@ -24,9 +22,8 @@ const MobileNav = ({ menuItems, onClose, onOpen, hideLeft }) => {
             ))}
           </ul>
           <ul className='flex items-center gap-4 mt-10 font-medium'>
-            <li > <button className='px-4 py-3 text-black border rounded'>Log In</button></li>
-            <li  ><li > <button className='px-4 py-3 text-black border rounded'>Log Out</button></li></li>
-            
+            <li><button className='px-4 py-3 text-black border rounded'>Log In</button></li>
+            <li><button className='px-4 py-3 text-black border rounded'>Log Out</button></li>
           </ul>
         </div>
       </div>
@@ -35,4 +32,3 @@ const MobileNav = ({ menuItems, onClose, onOpen, hideLeft }) => {
 };
 
 export default MobileNav;
-
