@@ -10,6 +10,7 @@ import Home from './components/Home.jsx';
 import ErrorElement from './components/ErrorElement.jsx';
 import CategoryPage from './components/Category/CategoryPage.jsx';
 import Search from './components/Search.jsx';
+import SingleProduct from './components/SingleProduct.jsx';
 const router = createBrowserRouter([ 
   {
     path: '/',
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
       {
         path:'/search',
         element:<Search/>
+      },
+      {
+        path:'/items/:id',
+        element:<SingleProduct/>
       }
     ]
   },
@@ -35,5 +40,5 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <RouterProvider router={router} />
-  </React.StrictMode>,
+  </React.StrictMode>
 );

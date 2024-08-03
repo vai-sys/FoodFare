@@ -22,7 +22,7 @@ async function main() {
   });
 
   app.get("/", (req, res) => {
-    res.send("Vegify Recipe Server");
+    res.send("FoodFare Server");
   });
 }
 
