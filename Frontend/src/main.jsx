@@ -11,6 +11,10 @@ import ErrorElement from './components/ErrorElement.jsx';
 import CategoryPage from './components/Category/CategoryPage.jsx';
 import Search from './components/Search.jsx';
 import SingleProduct from './components/SingleProduct.jsx';
+import About from './components/About.jsx';
+import Contact from './components/Contact.jsx';
+import Recipes from './components/Recipes.jsx';
+import Resources from './components/Resources.jsx';
 const router = createBrowserRouter([ 
   {
     path: '/',
@@ -18,9 +22,31 @@ const router = createBrowserRouter([
     errorElement:<ErrorElement/>, 
     children:[
       {
-        path:'/',
+        path:'/home',
         element:<Home/>
       },
+      {
+        path:'/about',
+        element:<About/>
+      },
+      {
+        path:'/contact',
+        element:<Contact/>
+      },
+      {
+        path:'/recipes',
+        element:<Recipes/>
+      },
+      {
+        path:'/resources',
+        element:<Resources/>
+      },
+
+
+
+
+
+
       {
         path:'/categories/:category',
         element:<CategoryPage/>
@@ -31,7 +57,8 @@ const router = createBrowserRouter([
       },
       {
         path:'/items/:id',
-        element:<SingleProduct/>
+        element:<SingleProduct/>,
+        loader:({params})=>fetch(`http://localhost:5000/api/items/${params.id}`)
       }
     ]
   },
