@@ -48,7 +48,7 @@ import { GoClock } from "react-icons/go";
 
 const Card = ({item}) => {
     const categoryStyles = {
-        Entrees: {backgroundColor: "#f0f5c4", color: "#59871f"}, // Corrected category name
+        Entrees: {backgroundColor: "#f0f5c4", color: "#59871f"}, 
         Breakfast: {backgroundColor: "#efedfa", color: "#3c3a8f"},
         Lunch: {backgroundColor: "#e5f7f3", color: "#59871f"},
         Desserts: {backgroundColor: "#e8f5fa", color: "#397a9e"},
