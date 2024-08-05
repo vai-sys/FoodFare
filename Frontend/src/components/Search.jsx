@@ -26,7 +26,7 @@ const Search = () => {
             if (query) {
                 setLoading(true);
                 try {
-                    const response = await axios.get(`http://localhost:5000/api/items`, {
+                    const response = await axios.get(`https://foodfare.onrender.com/api/items`, {
                         params: { q: query }
                     });
                     setResults(response.data);
@@ -48,7 +48,7 @@ const Search = () => {
         const params = new URLSearchParams(window.location.search);
         params.set('query', query);
         window.history.pushState({}, '', `${window.location.pathname}?${params.toString()}`);
-        // Manually trigger the URL change
+       
         setQuery(query);
     };
 
