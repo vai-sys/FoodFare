@@ -20,8 +20,8 @@ const DesktopNav = ({ menuItems }) => {
       </ul>
       
       <ul className='flex items-center font-medium gap-4'>
-        <li><button className='px-4 py-2 text-black rounded'>Log In</button></li>
-        <li><button className='px-4 py-2 text-black rounded'>Log Out</button></li>
+       <Link to='/users/login'> <li ><button className='px-4 py-2 text-black rounded'>Log In</button></li></Link>
+       <Link to='/users/register'> <li ><button className='px-4 py-2 text-black rounded'>Register</button></li></Link>
       </ul>
     </div>
   )

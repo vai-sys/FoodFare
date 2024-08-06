@@ -11,7 +11,7 @@ const Recipes = () => {
   useEffect(() => {
     const getLatestItems = async () => {
       try {
-        const response = await axios.get('https://foodfare.onrender.com/api/all-items');
+        const response = await axios.get('http://localhost:5000/api/all-items');
         setItems(response.data);
       } catch (error) {
         console.error('Error fetching items:', error);

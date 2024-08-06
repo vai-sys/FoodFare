@@ -1,11 +1,70 @@
 
 
+// import React from 'react';
+// import ReactDOM from 'react-dom/client';
+// import App from './App';
+// import './index.css';
+// import { createBrowserRouter } from 'react-router-dom';
+// import { RouterProvider } from 'react-router-dom'; 
+// import Home from './components/Home.jsx';
+// import ErrorElement from './components/ErrorElement.jsx';
+// import CategoryPage from './components/Category/CategoryPage.jsx';
+// import Search from './components/Search.jsx';
+// import SingleProduct from './components/SingleProduct.jsx';
+// import About from './components/About.jsx';
+// import Recipes from './components/Recipes.jsx';
+// import RecipePage from './components/RecipePage.jsx'
+
+// const router = createBrowserRouter([ 
+//   {
+//     path: '/',
+//     element: <App />,
+//     errorElement:<ErrorElement/>, 
+//     children:[
+//       {
+//         path:'/home',
+//         element:<Home/>
+//       },
+//       {
+//         path:'/about',
+//         element:<About/>
+//       },
+//       {
+//         path:'/recipes',
+//         element:<Recipes/>
+//       },
+//       {
+//         path:'/categories/:category',
+//         element:<CategoryPage/>
+//       },
+//       {
+//         path:'/search',
+//         element:<Search/>
+//       },
+//       {
+//         path:'/recipes/:id',
+//         element:<RecipePage/>
+//       },
+//       {
+//         path:'/items/:id',
+//         element:<SingleProduct/>,
+//         loader:({params})=>fetch(`http://localhost:5000/api/items/${params.id}`)
+//       }
+//     ]
+//   },
+// ]);
+
+// ReactDOM.createRoot(document.getElementById('root')).render(
+//   <React.StrictMode>
+//     <RouterProvider router={router} />
+//   </React.StrictMode>
+// );
+
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import './index.css';
-import { createBrowserRouter } from 'react-router-dom';
-import { RouterProvider } from 'react-router-dom'; 
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Home from './components/Home.jsx';
 import ErrorElement from './components/ErrorElement.jsx';
 import CategoryPage from './components/Category/CategoryPage.jsx';
@@ -14,41 +73,57 @@ import SingleProduct from './components/SingleProduct.jsx';
 import About from './components/About.jsx';
 import Recipes from './components/Recipes.jsx';
 import RecipePage from './components/RecipePage.jsx'
+import Login from './components/Login.jsx'
+import Register from './components/Register.jsx'
 
-const router = createBrowserRouter([ 
+const router = createBrowserRouter([
   {
     path: '/',
     element: <App />,
-    errorElement:<ErrorElement/>, 
-    children:[
+    errorElement: <ErrorElement />,
+    children: [
       {
-        path:'/home',
-        element:<Home/>
+        index: true,
+        element: <Home />
       },
       {
-        path:'/about',
-        element:<About/>
+        path: 'home',
+        element: <Home />
       },
       {
-        path:'/recipes',
-        element:<Recipes/>
+        path: 'about',
+        element: <About />
       },
       {
-        path:'/categories/:category',
-        element:<CategoryPage/>
+        path: 'recipes',
+        element: <Recipes />
       },
       {
-        path:'/search',
-        element:<Search/>
+        path: 'categories/:category',
+        element: <CategoryPage />
       },
       {
-        path:'/recipes/:id',
-        element:<RecipePage/>
+        path: 'search',
+        element: <Search />
       },
       {
-        path:'/items/:id',
-        element:<SingleProduct/>,
-        loader:({params})=>fetch(`https://foodfare.onrender.com/api/items/${params.id}`)
+        path: 'recipes/:id',
+        element: <RecipePage />
+      },
+      {
+
+        path:'users/login',
+        element:<Login/>
+      },
+      {
+
+        path:'users/register',
+        element:<Register/>
+      },
+      {
+        path: 'items/:id',
+        element: <SingleProduct />,
+        loader: ({ params }) => fetch(`http://localhost:5000/api/items/${params.id}`)
       }
     ]
   },
@@ -59,5 +134,3 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <RouterProvider router={router} />
   </React.StrictMode>
 );
-
-

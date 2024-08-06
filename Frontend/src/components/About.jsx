@@ -19,7 +19,7 @@ const About = () => {
             <div className="border-t border-gray-200 pt-8">
               <h2 className="text-2xl font-semibold mb-4 text-gray-700 text-center">About the Creator</h2>
               <p className="text-gray-600 mb-6 text-center">
-                Hello! I'm [Your Name], the passionate food enthusiast behind FoodFare. 
+                Hello! I'm Vaishnavi, the passionate food enthusiast behind FoodFare. 
                 With a love for cooking and a background in web development, 
                 I've created this platform to share my culinary adventures and connect with fellow food lovers.
               </p>
