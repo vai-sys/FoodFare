@@ -14,7 +14,12 @@ const Register = () => {
         username,
         password
       });
-      setMessage(response.data.msg || "Registration Successful!");
+      setMessage('Registration successful! Redirecting to login...');
+      setTimeout(() => {
+        navigate('/users/login');
+      }, 2000);
+
+
     } catch (error) {
       if (error.response) {
         setMessage(error.response.data.msg || 'An error occurred');
