@@ -14,7 +14,7 @@ app.use(cors());
 
 async function main() {
  
-  const connectionString = process.env.MONGODB_URI || 'mongodb://localhost:27017';
+  const connectionString = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017';
   const dbName = 'vegify-recipe-app';
 
   try {
