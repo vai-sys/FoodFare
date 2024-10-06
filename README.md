@@ -4,9 +4,9 @@ Authenticated users in the FoodFare application can effortlessly explore a diver
 
 ## Features
 
-- Feature 1:Category Filtering:Easily filter recipes based on categories like Breakfast, Lunch, or Drinks, allowing users to find dishes that meet their dietary needs.
-- Feature 2:Search Functionality:A robust search bar lets users type in keywords to quickly find specific recipes, ingredients, or cooking styles
-- Feature 3:Detailed Recipe Information :Each recipe includes essential details such as ingredients, cooking instructions, preparation time, and user ratings.
+- Category Filtering:Easily filter recipes based on categories like Breakfast, Lunch, or Drinks, allowing users to find dishes that meet their dietary needs.
+- Search Functionality:A robust search bar lets users type in keywords to quickly find specific recipes, ingredients, or cooking styles
+- Detailed Recipe Information :Each recipe includes essential details such as ingredients, cooking instructions, preparation time, and user ratings.
 
 ## Technologies Used
 
@@ -19,6 +19,7 @@ Authenticated users in the FoodFare application can effortlessly explore a diver
 1. Clone the repository:
    ```bash
    git clone [https://github.com/vai-sys/FoodFare.git]
+   
    
 ![Screenshot 2024-10-06 095317](https://github.com/user-attachments/assets/46ed24dd-5f5c-44c3-b3e7-96037041d4c6)
 ![Screenshot 2024-10-06 095258](https://github.com/user-attachments/assets/fa62c8ba-712c-4d76-8388-53ee275a176d)
