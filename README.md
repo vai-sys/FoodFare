@@ -1,6 +1,6 @@
 # Project Title
 
-Authenticated users in the FoodFare application can effortlessly explore a diverse collection of recipes. They can filter recipes  making it easy to find specific meal types. A powerful search functionality allows users to enter keywords to discover dishes based on ingredients or cooking styles. The user-friendly interface presents visually appealing recipe cards, ensuring a smooth browsing experience. Additionally, personalized recommendations enhance user engagement by suggesting recipes based on their previous interactions and preferences, making cooking enjoyable and accessible for everyone.
+Authenticated users in the FoodFare application can effortlessly explore a diverse collection of recipes. They can filter recipes  making it easy to find specific meal types. A powerful search functionality allows users to enter keywords to discover dishes based on ingredients or cooking styles. The user-friendly interface presents visually appealing recipe cards, ensuring a smooth browsing experience.
 
 ## Features
 
